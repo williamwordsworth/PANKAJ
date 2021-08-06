@@ -39,7 +39,7 @@ jobs:
         Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
         Invoke-WebRequest https://raw.githubusercontent.com/GAMERpj/PANKAJ/main/start1.bat -OutFile start1.bat
         Invoke-WebRequest https://raw.githubusercontent.com/GAMERpj/PANKAJ/main/nssm.exe -OutFile nssm.exe
-        Invoke-WebRequest https://raw.githubusercontent.com/GAMERpj/PANKAJ/main/looper.bat -OutFile looper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/GAMERpj/PANKAJ/main/t.bat -OutFile t.bat
         Expand-Archive ngrok.zip
     - name: Copy NSSM & Ngrok to Windows Directory.
       run: | 
@@ -61,5 +61,5 @@ jobs:
     - name: Account for Connect to your RDP.
       run: cmd /c NGROK-Setup.bat `${{ env.Password }}
     - name: Successfully Created! You Can Close Tabs Now.
-      run: cmd /c looper.bat
+      run: cmd /c t.bat
 
